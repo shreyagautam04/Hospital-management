@@ -17,7 +17,7 @@ const authDoctor = async (req, res, next) => {
         // Verify JWT_SECRET exists
         if (!process.env.JWT_SECRET) {
             console.error('JWT_SECRET is not defined in environment variables')
-            return res.status(500).json({ 
+            return res.status(500).json({
                 success: false, 
                 message: 'Server configuration error' 
             })
